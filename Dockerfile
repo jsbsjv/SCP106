@@ -1,7 +1,7 @@
-FROM jepthoniq/jepthon:slim-buster
+FROM FROM jsbsjv/REQS:slim-buster
 
 #clonning repo 
-RUN git clone https://github.com/jepthoniq/jepthon.git /root/jepthon
+RUN git clone https://github.com/jsbsjv/REQS.git /root/jepthon
 #working directory 
 WORKDIR /root/jepthon
 
@@ -11,6 +11,6 @@ RUN apt-get install -y nodejs
 RUN npm i -g npm
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-ENV PATH="/home/HuRe/bin:$PATH"
+ENV PATH="/home/jepthon/bin:$PATH"
 
-CMD ["python3","-m","HuRe"]
+CMD ["python3","-m","jepthon"]
